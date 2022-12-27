@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Amazon/static/css/main.35f8ff85.css",
-    "main.js": "/Amazon/static/js/main.3c08cdc8.js",
+    "main.css": "/Amazon/static/css/main.05bb2675.css",
+    "main.js": "/Amazon/static/js/main.71975421.js",
     "static/js/787.c075ba41.chunk.js": "/Amazon/static/js/787.c075ba41.chunk.js",
     "static/media/revicons.eot": "/Amazon/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/Amazon/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/Amazon/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/Amazon/index.html",
-    "main.35f8ff85.css.map": "/Amazon/static/css/main.35f8ff85.css.map",
-    "main.3c08cdc8.js.map": "/Amazon/static/js/main.3c08cdc8.js.map",
+    "main.05bb2675.css.map": "/Amazon/static/css/main.05bb2675.css.map",
+    "main.71975421.js.map": "/Amazon/static/js/main.71975421.js.map",
     "787.c075ba41.chunk.js.map": "/Amazon/static/js/787.c075ba41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35f8ff85.css",
-    "static/js/main.3c08cdc8.js"
+    "static/css/main.05bb2675.css",
+    "static/js/main.71975421.js"
   ]
 }
