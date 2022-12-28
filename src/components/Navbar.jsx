@@ -71,7 +71,7 @@ export const Navbar = ({ username }) => {
           </NavLink>
           {/* </div> */}
         </div>
-        <div className="text-white mx-2 min-w-[153px] relative">
+        <div className="text-white mx-2 cursor-pointer min-w-[153px] relative">
           <div className="text-xs peer">Hello, {username}</div>
           <div className="text-xs font-semibold peer">Account & Lists</div>
           {/* // */}

@@ -8,17 +8,19 @@ export default function PaymentMethod() {
   const [coupons, setCoupons] = useState(["NEWYEAR60"]);
   const [couponInputVal, setcouponInputVal] = useState();
   const discount = 0.4; // i.e 60 % discount
+  const [discountedPrice, setdiscountedPrice] = useState();
 
   const couponInputRef = useRef();
 
   useEffect(() => {
-    setcartPrice(15000);
+    // setcartPrice(15000);
+    setdiscountedPrice(cartPrice);
   }, []);
 
   useEffect(() => {
     coupons.includes(couponInputRef.current.value) &&
       cartPrice &&
-      setcartPrice(cartPrice * discount);
+      setdiscountedPrice(cartPrice * discount);
   }, [couponInputVal]);
 
   return (
@@ -113,16 +115,17 @@ export default function PaymentMethod() {
               {/* <div className="ml-auto">- ₹{cartPrice}.00</div> */}
               {/* Coupon discount NEWYEAR60 below */}
               <div className="ml-auto">
-                - ₹{cartPrice - cartPrice * discount}.00
+                {/* - ₹{cartPrice - cartPrice * discount}.00 */}
+                - ₹{cartPrice - discountedPrice}.00
               </div>
             </div>
             <div className="flex text-xl text-red-600 font-bold my-2">
               <div>Order Total:</div>
-              <div className="ml-auto">₹{cartPrice}.00</div>
+              <div className="ml-auto">₹{discountedPrice}.00</div>
             </div>
             <div className="font-semibold">
               Order Totals include GST.
-              <a className="text-sm cursor-pointer text-blue-500 hover:underline">
+              <a className="text-sm cursor-pointer ml-1 text-blue-500 hover:underline">
                 See details
               </a>
             </div>

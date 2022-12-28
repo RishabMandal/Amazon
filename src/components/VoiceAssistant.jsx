@@ -25,14 +25,16 @@ export default function VoiceAssistant({
 
   useEffect(() => {
     async function getData() {
-      const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0ebf0e29926cc939f557a936228e1129`
-      );
+      if (latitude) {
+        const res = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0ebf0e29926cc939f557a936228e1129`
+        );
 
-      settemperature(Math.floor(res.data.main.temp) - 273); //floor used for rounding
-      setfeelslike(Math.floor(res.data.main.feels_like) - 273); //floor used for rounding
-      // setarea(res.data.name);
-      // setaboutsky(res.data.weather[0].main);
+        settemperature(Math.floor(res.data.main.temp) - 273); //floor used for rounding
+        setfeelslike(Math.floor(res.data.main.feels_like) - 273); //floor used for rounding
+        // setarea(res.data.name);
+        // setaboutsky(res.data.weather[0].main);
+      }
     }
 
     getData();

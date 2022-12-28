@@ -5,17 +5,9 @@ import { Divider } from "@mui/material";
 // import { getProducts } from "../redux/actions/action";
 // import { useSelector, useDispatch } from "react-redux";
 import { products } from "./productData";
+import { NavLink } from "react-router-dom";
 
 const Slides = () => {
-  //   const { products } = useSelector((state) => state.getproductsdata);
-  //   // console.log(products);
-
-  //   const dispatch = useDispatch();
-
-  //   useEffect(() => {
-  //     dispatch(getProducts());
-  //   }, [dispatch]);
-
   return (
     <>
       <div className="home_section pr-4">
@@ -48,13 +40,45 @@ const Slides = () => {
           productType="lipstick"
         />
 
-        <div className="center_img block w-[80%] mx-auto my-[13px] ">
-          <img
-            src="https://m.media-amazon.com/images/G/31/AMS/IN/970X250-_desktop_banner.jpg"
-            alt=""
-            className="mx-auto"
-          />
-        </div>
+        <NavLink to="/products">
+          <div className="center_img flex flex-wrap px-4 justify-evenly mx-auto my-[13px] ">
+            <div className="flex space-x-4 bg-gray-50 p-4 cursor-pointer">
+              <img
+                src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/1ce5ec29-9a3c-42d3-bda2-dee2b98956ba._CR0,0,675,675_AC_SX130_SY60_QL70_.jpg"
+                alt=""
+                className="w-16 object-contain border-r pr-4"
+              />
+              <div className="my-auto">
+                <div className="hover:text-red-600 text-xl font-semibold">
+                  Up your game with Maybelline New York
+                </div>
+                <div className="flex hover:text-red-600">
+                  Shop Maybelline New York
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <img
+              // src="https://m.media-amazon.com/images/G/31/AMS/IN/970X250-_desktop_banner.jpg"
+              src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/81935a8f-3380-4f54-9496-466e94417dde._CR0,0,1200,628_SX405_QL70_.jpg"
+              alt=""
+              className="mx-auto"
+            />
+          </div>
+        </NavLink>
 
         <Slide title="Best Seller" products={products} productType="eyeliner" />
         <Slide title="Upto 80% off" products={products} productType="mascara" />

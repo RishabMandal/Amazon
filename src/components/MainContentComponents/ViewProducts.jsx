@@ -388,7 +388,9 @@ export const ViewProducts = () => {
           <div className="text-left text-xs font-bold mt-3 mb-1">
             Deals & Discounts
           </div>
-          <div className="text-xs text-left hover:text-red-700">Today's Deals</div>
+          <div className="text-xs text-left hover:text-red-700">
+            Today's Deals
+          </div>
         </div>
         {/* Right side  */}
         <div className="w-5/6">
@@ -402,9 +404,12 @@ export const ViewProducts = () => {
                 <div className="flex flex-wrap w-full">
                   {/* // */}
                   {productJSON &&
-                    productJSON.map((product) => {
+                    productJSON.map((product, index) => {
                       return (
-                        <div className="lg:w-1/4 md:w-1/2 p-4 w-full border my-1">
+                        <div
+                          key={index}
+                          className="lg:w-1/4 md:w-1/2 p-4 w-full border my-1"
+                        >
                           <a className="block relative h-48 rounded overflow-hidden">
                             <NavLink to={`/getproductsone/${product.id}`}>
                               <img
